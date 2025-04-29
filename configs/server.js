@@ -7,7 +7,11 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticion.js';
 import authRoutes from '../src/auth/auth.routes.js'
+<<<<<<< HEAD
 import categoryRoutes from '../src/category/category.routes.js'
+=======
+import userRoutes from '../src/user/user.routes.js'
+>>>>>>> hmonroy
 
  
 const middlewares = (app) => {
@@ -21,7 +25,11 @@ const middlewares = (app) => {
 
 const routes =(app) => {
     app.use("/Almacenadora/v1/auth", authRoutes);
+<<<<<<< HEAD
     app.use("/Almacenadora/v1/categories", categoryRoutes);
+=======
+    app.use("/Almacenadora/v1/users", userRoutes)
+>>>>>>> hmonroy
 }
  
 const conectarDB = async () => {
