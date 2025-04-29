@@ -4,7 +4,7 @@ import { addCategory, listCategories, deleteCategory, updateCategory } from "./c
 import { validarCampos } from "../middlewares/validar-campos.js"
 import { validarJWT } from "../middlewares/validar-jwt.js"
 import { existCategory } from "../helpers/db-validator.js"
-import { tieneRole } from "../middlewares/validar-role.js"
+import { tieneRole } from "../middlewares/validar-roles.js"
 
 const router = Router();
 
