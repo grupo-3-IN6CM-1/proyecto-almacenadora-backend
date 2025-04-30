@@ -18,15 +18,6 @@ export const listCategories = async (req, res) => {
 
 export const addCategory = async (req, res) => {
     try {
-        
-        const authenticatedUser = req.user;
-
-        if (!authenticatedUser || authenticatedUser.role !== "ADMIN") {
-            return res.status(403).json({
-                success: false,
-                message: "This action is only availiable for admins"
-            })
-        }
 
         const { name } = req.body;
         const existCategory = await Category.findOne({ name });

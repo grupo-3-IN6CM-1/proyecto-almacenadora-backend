@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createProduct, updateProduct, deleteProduct } from "./product.controller.js";
+import { createProduct, updateProduct, deleteProduct, searchProducts } from "./product.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { existeProductoById } from "../helpers/db-validator.js"; 
@@ -47,5 +47,10 @@ router.delete(
     ],
     deleteProduct
 );
+
+router.get(
+    "/buscar",
+    searchProducts
+  );
 
 export default router;

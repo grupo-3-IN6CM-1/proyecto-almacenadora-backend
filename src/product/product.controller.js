@@ -108,3 +108,46 @@ export const deleteProduct = async (req, res = response) => {
         });
     }
 };
+
+export const searchProducts = async (req, res = response) => {
+  try {
+    const { name, category, entry_date } = req.query;
+    let filter = {};
+
+    if (name) {
+      filter.name = { $regex: name, $options: "i" }; 
+    }
+    if (category) {
+      filter.category = category;
+    }
+    if (entry_date) {
+      filter.entry_date = { $gte: new Date(entry_date) };
+    }
+
+    const products = await Product.find(filter)
+        .populate("category", "name")
+        .lean()
+
+        products.forEach((product) => {
+            if (product.category) {
+              product.category = {
+                _id: product.category._id,
+                name: product.category.name,
+              };
+            }
+          });
+
+          res.status(200).json({
+            success: true,
+            products
+          });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      msg: "Error searching products ❌",
+      error: error.message
+    });
+  }
+};
