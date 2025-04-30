@@ -2,6 +2,7 @@ import User from '../user/user.model.js';
 import Category from '../category/category.model.js';
 import Supplier from "../supplier/supplier.model.js";
 import Product from "../product/product.model.js"
+import Client from '../cliente/client.model.js';
 import { Types } from "mongoose";
 
 export const existenteEmail = async (email = '') =>{
@@ -44,3 +45,10 @@ export const existeProductoById = async (id) => {
         throw new Error(`No product found with ID: ${id} 🔍❌`);
     }
 };
+
+export const existeClienteById = async (id) => {
+    const clientExists = await Client.findById(id);
+    if (!clientExists) {
+      throw new Error(`No client found with ID: ${id} 🔍❌`);
+    }
+  };
