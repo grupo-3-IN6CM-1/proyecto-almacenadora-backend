@@ -10,6 +10,7 @@ import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import userRoutes from '../src/user/user.routes.js'
 import supplierRoutes from '../src/supplier/supplier.routes.js';
+import productRoutes from '../src/product/product.routes.js';
 
  
 const middlewares = (app) => {
@@ -26,6 +27,7 @@ const routes =(app) => {
     app.use("/Almacenadora/v1/categories", categoryRoutes);
     app.use("/Almacenadora/v1/users", userRoutes)
     app.use("/Almacenadora/v1/supplier", supplierRoutes)
+    app.use("/Almacenadora/v1/product", productRoutes)
 }
  
 const conectarDB = async () => {

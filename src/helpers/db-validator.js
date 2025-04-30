@@ -1,6 +1,7 @@
 import User from '../user/user.model.js';
 import Category from '../category/category.model.js';
 import Supplier from "../supplier/supplier.model.js";
+import Product from "../product/product.model.js"
 import { Types } from "mongoose";
 
 export const existenteEmail = async (email = '') =>{
@@ -34,5 +35,12 @@ export const existeProveedorById = async (id) => {
     const supplierExists = await Supplier.findById(id);
     if (!supplierExists) {
         throw new Error(`No supplier found with ID: ${id} 🔍❌`);
+    }
+};
+
+export const existeProductoById = async (id) => {
+    const productExists = await Product.findById(id);
+    if (!productExists) {
+        throw new Error(`No product found with ID: ${id} 🔍❌`);
     }
 };

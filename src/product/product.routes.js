@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createSupplier, updateSupplier, deleteSupplier } from "./supplier.controller.js";
+import { createProduct, updateProduct, deleteProduct } from "./product.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
-import { existeProveedorById } from "../helpers/db-validator.js"; 
+import { existeProductoById } from "../helpers/db-validator.js"; 
 import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
@@ -13,11 +13,12 @@ router.post(
     [
         validarJWT, 
         tieneRole("ADMIN"), 
-        check("name", "Supplier name is required").not().isEmpty(), 
-        check("contact", "Supplier contact is required").not().isEmpty(), 
+        check("name", "Product name is required").not().isEmpty(), 
+        check("price", "Product price is required").isNumeric(), 
+        check("stock", "Product stock is required").isInt({ min: 0 }), 
         validarCampos, 
     ],
-    createSupplier
+    createProduct
 );
 
 router.put(
@@ -26,12 +27,13 @@ router.put(
         validarJWT, 
         tieneRole("ADMIN"), 
         check("id", "Invalid ID").isMongoId(), 
-        check("id").custom(existeProveedorById), 
+        check("id").custom(existeProductoById), 
         check("name").optional().not().isEmpty(), 
-        check("contact").optional().not().isEmpty(), 
+        check("price").optional().isNumeric(), 
+        check("stock").optional().isInt({ min: 0 }), 
         validarCampos, 
     ],
-    updateSupplier
+    updateProduct
 );
 
 router.delete(
@@ -39,11 +41,11 @@ router.delete(
     [
         validarJWT, 
         tieneRole("ADMIN"), 
-        check("id", "Invalid ID").isMongoId(),
-        check("id").custom(existeProveedorById), 
+        check("id", "Invalid ID").isMongoId(), 
+        check("id").custom(existeProductoById), 
         validarCampos, 
     ],
-    deleteSupplier
+    deleteProduct
 );
 
 export default router;
