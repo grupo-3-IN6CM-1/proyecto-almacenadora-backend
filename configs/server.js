@@ -9,6 +9,7 @@ import limiter from '../src/middlewares/validar-cant-peticion.js';
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import userRoutes from '../src/user/user.routes.js'
+import supplierRoutes from '../src/supplier/supplier.routes.js';
 
  
 const middlewares = (app) => {
@@ -24,6 +25,7 @@ const routes =(app) => {
     app.use("/Almacenadora/v1/auth", authRoutes);
     app.use("/Almacenadora/v1/categories", categoryRoutes);
     app.use("/Almacenadora/v1/users", userRoutes)
+    app.use("/Almacenadora/v1/supplier", supplierRoutes)
 }
  
 const conectarDB = async () => {
