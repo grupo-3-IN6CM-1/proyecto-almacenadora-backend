@@ -4,6 +4,7 @@ import Supplier from "../supplier/supplier.model.js";
 import Product from "../product/product.model.js"
 import Client from '../cliente/client.model.js';
 import { Types } from "mongoose";
+import mongoose from 'mongoose';
 
 export const existenteEmail = async (email = '') =>{
     const existeEmail = await User.findOne({ email });
@@ -52,3 +53,18 @@ export const existeClienteById = async (id) => {
       throw new Error(`No client found with ID: ${id} 🔍❌`);
     }
   };
+
+  export const stockProduct = async (id = '', quantity = 1) => {
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        throw new Error(`The ID "${id}" is not a valid ObjectId.`);
+    }
+
+    const product = await Product.findById(id);
+    if (!product) {
+        throw new Error(`Product with ID "${id}" does not exist.`);
+    }
+
+    if (product.stock < quantity) {
+        throw new Error(`Insufficient stock for product "${product.name}". Available: ${product.stock}, Requested: ${quantity}`);
+    }
+};
