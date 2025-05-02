@@ -12,6 +12,8 @@ import userRoutes from '../src/user/user.routes.js'
 import supplierRoutes from '../src/supplier/supplier.routes.js';
 import productRoutes from '../src/product/product.routes.js';
 import clientRoutes from '../src/cliente/client.routes.js'
+import kardexRoutes from '../src/kardex/kardex.routes.js'
+import reportRoutes from '../src/reports/report.routes.js'
 
  
 const middlewares = (app) => {
@@ -30,6 +32,8 @@ const routes =(app) => {
     app.use("/Almacenadora/v1/supplier", supplierRoutes)
     app.use("/Almacenadora/v1/product", productRoutes)
     app.use("/Almacenadora/v1/clientes", clientRoutes)
+    app.use("/Almacenadora/v1/kardex", kardexRoutes)
+    app.use("/Almacenadora/v1/report", reportRoutes)
 }
  
 const conectarDB = async () => {

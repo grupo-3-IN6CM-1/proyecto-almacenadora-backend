@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createProduct, updateProduct, deleteProduct, searchProducts, generateAndOpenProductsReport } from "./product.controller.js";
+import { createProduct, updateProduct, deleteProduct, searchProducts } from "./product.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
-import { existeProductoById, stockProduct } from "../helpers/db-validator.js"; 
+import { existeProductoById, stockProduct, existeProductoPorNombre } from "../helpers/db-validator.js"; 
 import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
@@ -13,6 +13,7 @@ router.post(
     [
         validarJWT, 
         tieneRole("ADMIN"), 
+        check("name").custom(existeProductoPorNombre),
         check("name", "Product name is required").not().isEmpty(), 
         check("price", "Product price is required").isNumeric(), 
         check("stock", "Product stock is required").isInt({ min: 0 }), 
@@ -51,16 +52,6 @@ router.delete(
 router.get(
     "/buscar",
     searchProducts
-);
-
-router.get(
-    "/products-report",
-    [
-        validarJWT, // Verifica que el usuario esté autenticado
-        check("id").custom(stockProduct),
-        tieneRole("ADMIN"), // Solo los administradores pueden acceder a esta ruta
-    ],
-    generateAndOpenProductsReport
 );
 
 export default router;

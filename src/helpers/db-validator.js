@@ -47,6 +47,13 @@ export const existeProductoById = async (id) => {
     }
 };
 
+export const existeProductoPorNombre = async (name = "") => {
+    const producto = await Product.findOne({ name });
+    if (producto) {
+      throw new Error(`Ya existe un producto con nombre: ${name}`);
+    }
+  };
+
 export const existeClienteById = async (id) => {
     const clientExists = await Client.findById(id);
     if (!clientExists) {
