@@ -17,7 +17,7 @@ router.post(
     "/",
     [
         validarJWT,
-        tieneRole("ADMIN"),
+        tieneRole("ADMIN", "USER"),
         check("name", "The name is required").not().isEmpty(),
         validarCampos
     ],
@@ -29,7 +29,7 @@ router.put(
     "/:id",
     [
         validarJWT,
-        tieneRole('ADMIN'), 
+        tieneRole("ADMIN", "USER"), 
         check("id", "Invalid ID").isMongoId(),
         validarCampos
     ],

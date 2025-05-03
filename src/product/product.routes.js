@@ -3,7 +3,7 @@ import { check } from "express-validator";
 import { createProduct, updateProduct, deleteProduct, searchProducts } from "./product.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
-import { existeProductoById, stockProduct, existeProductoPorNombre } from "../helpers/db-validator.js"; 
+import { existeProductoById, existCategory, existeProductoPorNombre } from "../helpers/db-validator.js"; 
 import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
@@ -16,6 +16,8 @@ router.post(
         check("name").custom(existeProductoPorNombre),
         check("name", "Product name is required").not().isEmpty(), 
         check("price", "Product price is required").isNumeric(), 
+        check("category", "Category ID is required").not().isEmpty(),
+        check("category").custom(existCategory),
         check("stock", "Product stock is required").isInt({ min: 0 }), 
         validarCampos, 
     ],
@@ -31,6 +33,7 @@ router.put(
         check("id").custom(existeProductoById), 
         check("name").optional().not().isEmpty(), 
         check("price").optional().isNumeric(), 
+        check("category", "Category ID is required").not().isEmpty(),
         check("stock").optional().isInt({ min: 0 }), 
         validarCampos, 
     ],

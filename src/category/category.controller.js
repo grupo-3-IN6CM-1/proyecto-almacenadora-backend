@@ -1,4 +1,5 @@
 import Category from "./category.model.js";
+import Product from "../product/product.model.js";
 
 export const listCategories = async (req, res) => {
     try {
@@ -78,30 +79,24 @@ export const updateCategory = async (req, res = response) => {
     }
 };
 
+
 export const deleteCategory = async (req, res) => {
     try {
-        const { id } = req.params
-        const authenticatedUser = req.user
+        const { id } = req.params;
+        const category = await Category.findByIdAndUpdate(id, { status: false }, { new: true });
 
-        if (!authenticatedUser || authenticatedUser.role !== "ADMIN") {
-            return res.status(403).json({
-                success: false,
-                message: "This action is only availiable for admins"
-            })
-        }
-
-        const category = await Category.findByIdAndUpdate( id, { status: false }, { new : true });
+        await Product.updateMany({ category: id }, { $set: { category: null } });
 
         res.status(200).json({
             success: true,
-            message: "Category deactivated succesfully",
+            message: "Category deactivated successfully and products are unlinked",
             category
-        })
+        });
     } catch (error) {
-        res.status(200).json({
+        res.status(500).json({
             success: false,
             message: "Ups, something went wrong trying to deactivate the category",
             error
-        })
+        });
     }
-}
+};
