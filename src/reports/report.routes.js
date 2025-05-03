@@ -9,7 +9,7 @@ router.get(
   "/products-report",
   [
     validarJWT,
-    tieneRole("ADMIN", "USER") 
+    tieneRole("ADMIN") 
   ],
   generateAndOpenProductsReport 
 );
@@ -18,7 +18,7 @@ router.get(
     "/kardex-report",
     [
         validarJWT, 
-        tieneRole("ADMIN"), // Solo administradores pueden acceder a esta ruta
+        tieneRole("ADMIN"),
     ],
     generateKardexReport
 );

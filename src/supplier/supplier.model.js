@@ -16,7 +16,11 @@ const SupplierSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Product'
       }
-    ]
+    ],
+    status: {
+      type: Boolean,
+      default: true, 
+    }
   },
   {
     timestamps: true,

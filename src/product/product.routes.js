@@ -12,7 +12,7 @@ router.post(
     '/',
     [
         validarJWT, 
-        tieneRole("ADMIN"), 
+        tieneRole("ADMIN", "USER"), 
         check("name").custom(existeProductoPorNombre),
         check("name", "Product name is required").not().isEmpty(), 
         check("price", "Product price is required").isNumeric(), 
@@ -26,7 +26,7 @@ router.put(
     '/:id',
     [
         validarJWT, 
-        tieneRole("ADMIN"), 
+        tieneRole("ADMIN", "USER"), 
         check("id", "Invalid ID").isMongoId(), 
         check("id").custom(existeProductoById), 
         check("name").optional().not().isEmpty(), 

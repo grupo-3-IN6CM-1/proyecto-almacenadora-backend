@@ -1,2 +1,2 @@
->[!NOTE]
-  Se implementaron los reportes en excel de productos
+>[!IMPORTANT]
+ Se corrigieron algunos bugs
