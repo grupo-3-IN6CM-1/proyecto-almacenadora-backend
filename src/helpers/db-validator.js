@@ -14,6 +14,15 @@ export const existenteEmail = async (email = '') =>{
     }
 }
 
+export const existeUsuarioByUsername = async (username = '') => {
+    const existeUsuario = await User.findOne({ username });
+
+    if (existeUsuario) {
+        throw new Error(`El nombre de usuario ${username} ya está en uso. ⚠️`);
+    }
+}
+
+
 export const existeUsuarioById = async (id = '') => {
     const existeUsuario = await User.findById(id);
 
