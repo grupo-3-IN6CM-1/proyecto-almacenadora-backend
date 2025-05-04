@@ -14,7 +14,7 @@ router.post(
     "/salida",
     [
       validarJWT,
-      tieneRole("ADMIN"),
+      tieneRole("ADMIN", "USER"),
       check("productId", "Invalid product ID").isMongoId().bail().custom(existeProductoById),
       check("quantity", "Quantity must be an integer ≥ 1").isInt({ min: 1 }).bail().custom((_, { req }) => stockProduct(req.body.productId, req.body.quantity)),
       check("reason", "Reason is required").not().isEmpty(),
