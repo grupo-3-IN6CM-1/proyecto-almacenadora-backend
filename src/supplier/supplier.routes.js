@@ -1,12 +1,17 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createSupplier, updateSupplier, deleteSupplier } from "./supplier.controller.js";
+import { createSupplier, updateSupplier, deleteSupplier, listSupplier } from "./supplier.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { existeProveedorById, existeProductoById, existCategory } from "../helpers/db-validator.js"; 
 import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
+
+router.get(
+    '/',
+    listSupplier
+)
 
 router.post(
     '/',

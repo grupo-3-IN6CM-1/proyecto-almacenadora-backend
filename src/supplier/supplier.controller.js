@@ -1,6 +1,22 @@
 import { response } from "express";
 import Supplier from "./supplier.model.js"; 
 
+export const listSupplier = async (req, res) => {
+    try {
+        const suppliers = await Supplier.find({ status: true })
+        res.json({
+            success: true,
+            suppliers
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Ups, something went wrong trying to get the suppliers",
+            error
+        })
+    }
+}
+
 export const createSupplier = async (req, res = response) => {
     try {
         const { name, contact, products_supplied } = req.body;

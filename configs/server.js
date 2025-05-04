@@ -14,6 +14,7 @@ import productRoutes from '../src/product/product.routes.js';
 import clientRoutes from '../src/cliente/client.routes.js'
 import kardexRoutes from '../src/kardex/kardex.routes.js'
 import reportRoutes from '../src/reports/report.routes.js'
+import statsRoutes from '../src/stats/stats.routes.js'
 
  
 const middlewares = (app) => {
@@ -34,6 +35,7 @@ const routes =(app) => {
     app.use("/Almacenadora/v1/clientes", clientRoutes)
     app.use("/Almacenadora/v1/kardex", kardexRoutes)
     app.use("/Almacenadora/v1/report", reportRoutes)
+    app.use("/Almacenadora/v1/stats", statsRoutes)
 }
  
 const conectarDB = async () => {
