@@ -2,6 +2,26 @@ import { response } from "express";
 import Product from "./product.model.js";
 import Kardex from "../kardex/kardex.model.js";
 
+export const listProducts = async (req, res = response) => {
+    try {
+        const products = await Product.find({ status: true })  // Filtra los productos activos
+            .populate("category", "name")  // Poblamos la categoría del producto
+            .lean();  // Convertimos el documento de Mongoose a un objeto plano
+
+        res.status(200).json({
+            success: true,
+            products,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            msg: "Error fetching products ❌",
+            error: error.message,
+        });
+    }
+};
+
 export const createProduct = async (req, res = response) => {
     try {
         const {
