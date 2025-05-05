@@ -83,16 +83,32 @@ export const updateCategory = async (req, res = response) => {
 export const deleteCategory = async (req, res) => {
     try {
         const { id } = req.params;
-        const category = await Category.findByIdAndUpdate(id, { status: false }, { new: true });
+        const categoryToDelete = await Category.findById(id);
+        if (!categoryToDelete) {
+            return res.status(404).json({
+                success: false,
+                message: "Category not found 🔍❌"
+            });
+        }
 
-        await Product.updateMany({ category: id }, { $set: { category: null } });
+        let defaultCategory = await Category.findOne({ name: "Default" });
+
+        if (!defaultCategory) {
+            defaultCategory = new Category({ name: "Default" });
+            await defaultCategory.save();
+        }
+
+        await Category.findByIdAndUpdate(id, { status: false });
+
+        await Product.updateMany({ category: id }, { $set: { category: defaultCategory._id } });
 
         res.status(200).json({
             success: true,
-            message: "Category deactivated successfully and products are unlinked",
-            category
+            message: "Category deactivated successfully and products reassigned to Default",
+            category: categoryToDelete
         });
     } catch (error) {
+        console.error(error);
         res.status(500).json({
             success: false,
             message: "Ups, something went wrong trying to deactivate the category",
@@ -100,3 +116,4 @@ export const deleteCategory = async (req, res) => {
         });
     }
 };
+
