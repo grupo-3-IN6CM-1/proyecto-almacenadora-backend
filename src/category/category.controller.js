@@ -3,10 +3,10 @@ import Product from "../product/product.model.js";
 
 export const listCategories = async (req, res) => {
     try {
-        const cateories = await Category.find({ status: true })
+        const categories = await Category.find({ status: true })
         res.json({
             success: true,
-            cateories
+            categories
         })
     } catch (error) {
         res.status(500).json({

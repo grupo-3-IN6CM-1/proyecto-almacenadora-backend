@@ -54,45 +54,38 @@ export const createSupplier = async (req, res = response) => {
 
 export const updateSupplier = async (req, res = response) => {
     try {
-
-        if (req.usuario.role !== 'ADMIN') {
-            return res.status(403).json({
-                success: false,
-                msg: 'You do not have permission to perform this action ❌'
-            });
-        }
-
-        const supplierId = req.params.id; 
+        const supplierId = req.params.id;
         const { name, contact, products_supplied } = req.body;
 
         const existingSupplier = await Supplier.findById(supplierId);
         if (!existingSupplier) {
             return res.status(404).json({
                 success: false,
-                msg: 'Supplier not found 🔍❌'
+                msg: 'Proveedor no encontrado 🔍❌'
             });
         }
 
-        const updatedSupplier = await Supplier.findByIdAndUpdate(supplierId, {
-            name,
-            contact,
-            products_supplied
-        }, { new: true }); 
+        const updatedSupplier = await Supplier.findByIdAndUpdate(
+            supplierId,
+            { name, contact, products_supplied },
+            { new: true }
+        );
 
         res.status(200).json({
             success: true,
-            msg: 'Supplier updated successfully ✅',
+            msg: 'Proveedor actualizado ✅',
             supplier: updatedSupplier
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            msg: 'Error updating supplier ❌',
+            msg: 'Error al actualizar proveedor ❌',
             error: error.message
         });
     }
 };
+
 
 export const deleteSupplier = async (req, res = response) => {
     try {

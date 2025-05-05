@@ -47,7 +47,6 @@ router.delete(
         validarJWT, 
         tieneRole("ADMIN"), 
         check("id", "Invalid ID").isMongoId(),
-        check("id").custom(existCategory),
         check("id").custom(existeProveedorById), 
         validarCampos, 
     ],
