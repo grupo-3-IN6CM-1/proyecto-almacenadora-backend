@@ -1,6 +1,25 @@
 import { response } from "express";
 import Client from "./client.model.js";
 
+export const listClients = async (req, res = response) => {
+  try {
+    const clients = await Client.find({ status: true });
+
+    res.status(200).json({
+      success: true,
+      msg: "Clients retrieved successfully ✅",
+      clients
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      msg: "Error retrieving clients ❌",
+      error: error.message
+    });
+  }
+};
+
 export const createClient = async (req, res = response) => {
   try {
     const { name, contact, products_acquired } = req.body;

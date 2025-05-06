@@ -1,12 +1,14 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createClient, updateClient, deleteClient } from "./client.controller.js";
+import { listClients, createClient, updateClient, deleteClient } from "./client.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { existeClienteById } from "../helpers/db-validator.js"; 
 import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
+
+router.get("/", listClients);
 
 router.post(
   "/",
