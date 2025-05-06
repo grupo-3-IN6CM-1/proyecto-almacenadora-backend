@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "6819719424f436b18cbcb1b6"
+  },
+  "name": "Luis Pedro M",
+  "contact": "lmejia_@gmail.com",
+  "products_acquired": [
+    {
+      "$oid": "68196ebd24f436b18cbcb145"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:19:00.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:19:17.083Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199722c0f1ac9a4bea5f6f"
+  },
+  "name": "Esteban C",
+  "contact": "ecano@gmail.com",
+  "products_acquired": [
+    {
+      "$oid": "681996b4c0f1ac9a4bea5f56"
+    },
+    {
+      "$oid": "6819968ac0f1ac9a4bea5f4f"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:59:14.927Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:59:25.776Z"
+  }
+}]

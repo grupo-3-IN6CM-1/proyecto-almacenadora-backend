@@ -1,5 +1,6 @@
 import { response } from "express";
 import Product from "../product/product.model.js";
+import Kardex from "../kardex/kardex.model.js";
 import exceljs from "exceljs";
 import path from "path";
 import fs from "fs";

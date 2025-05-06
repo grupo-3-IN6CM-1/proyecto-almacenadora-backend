@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "40c79171-8f27-48d6-a758-4663fb1e0497",
+		"name": "Almacenadora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37533644"
+	},
+	"item": [
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Listar Categorias",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar categorias",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3YjY2MGJhNmNmNzdkYmI0ODBjNjQiLCJpYXQiOjE3NDYzOTQ0NTMsImV4cCI6MTc0NjM5ODA1M30.FA1Xw4aaj0bzUDJOkmhQthZtNeJpLsMHAdpEwwZqCt8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Categoria 5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Categorias",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzg4ODQsImV4cCI6MTc0NjI0MjQ4NH0.RP9y-uXhElKUBPHSp5TCmZc4vut2jVMGYvMQY9Mwl20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"CAtegoruy edited\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/categories/68129e5d7077d14f16dfebb2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"categories",
+								"68129e5d7077d14f16dfebb2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzg4ODQsImV4cCI6MTc0NjI0MjQ4NH0.RP9y-uXhElKUBPHSp5TCmZc4vut2jVMGYvMQY9Mwl20",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/categories/68129e5d7077d14f16dfebb2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"categories",
+								"68129e5d7077d14f16dfebb2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"elmersantos@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"name\": \"Akande\",\r\n\r\n  \"surname\": \"Ogundi\",\r\n\r\n  \"username\": \"doom\",\r\n\r\n  \"email\": \"akande@gmail.com\",\r\n\r\n  \"password\": \"12345678\"\r\n\r\n}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Registrar cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzA5MDYsImV4cCI6MTc0NjIzNDUwNn0.J5cbkZqfp7aBPbCbF8mlorwLFlcWfJUW_Gp-Pk8UI-Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Luis\",\r\n    \"contact\": \"luis@gmail.com\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar clientes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzA5MDYsImV4cCI6MTc0NjIzNDUwNn0.J5cbkZqfp7aBPbCbF8mlorwLFlcWfJUW_Gp-Pk8UI-Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"pedro\",\r\n    \"contact\": \"pedro@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/clientes/68155e872f2bd200fdb4b482",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"clientes",
+								"68155e872f2bd200fdb4b482"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzA5MDYsImV4cCI6MTc0NjIzNDUwNn0.J5cbkZqfp7aBPbCbF8mlorwLFlcWfJUW_Gp-Pk8UI-Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/clientes/68125c0d7d0726c01948cfb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"clientes",
+								"68125c0d7d0726c01948cfb0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Buscar productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/product/buscar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"product",
+								"buscar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar productos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3YjY2MGJhNmNmNzdkYmI0ODBjNjQiLCJpYXQiOjE3NDYzOTQ0NTMsImV4cCI6MTc0NjM5ODA1M30.FA1Xw4aaj0bzUDJOkmhQthZtNeJpLsMHAdpEwwZqCt8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Biscuits\",\r\n  \"description\": \"una prueba de producto\",\r\n  \"price\": 10.99,\r\n  \"stock\": 5,\r\n  \"category\": \"6817e4dd53291d61852ebf2c\",\r\n  \"supplier\": \"supplier\",\r\n  \"entry_date\": \"2025-05-02\",\r\n  \"expiration_date\": \"2028-01-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar producto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3N2VlODAxNzkwOTQ5MzBmYjg3N2YiLCJpYXQiOjE3NDYzNzQ2NDIsImV4cCI6MTc0NjM3ODI0Mn0.PA63yX_DjimKUN42evOWyQFkPw-J7NF_3qQZC6WQxoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Biscuits \",\r\n  \"description\": \"pets product\",\r\n  \"price\": 12,\r\n  \"stock\": 40,\r\n  \"category\": \"6812a4c5f2e68f9d9d944fde\", \r\n  \"supplier\": \"Proveedor XYZ\",\r\n  \"entry_date\": \"2022-01-01T00:00:00.000Z\",\r\n  \"expiration_date\": \"2023-01-01T00:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/product/681795dfbf162c942fc38c11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"product",
+								"681795dfbf162c942fc38c11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE1NDgyODlhNjEzOGI4ZDgwMDMwMDgiLCJpYXQiOjE3NDYyMzE1NTAsImV4cCI6MTc0NjIzNTE1MH0.djSsZcufPOx827C5GEPgdfUmzuJg-Q7TVzmHd3wikwg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/product/681534527276c9d056efac07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"product",
+								"681534527276c9d056efac07"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportería",
+			"item": [
+				{
+					"name": "Generar reporte de productos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3YjY2MGJhNmNmNzdkYmI0ODBjNjQiLCJpYXQiOjE3NDY1MDQ2MzYsImV4cCI6MTc0NjUwODIzNn0.nYIzaEo_lS97BgoG1F83oho60yqNVUG2M3XKyJeUIPU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/report/products-report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"report",
+								"products-report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Kardex",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3N2VlODAxNzkwOTQ5MzBmYjg3N2YiLCJpYXQiOjE3NDYzNzQ2NDIsImV4cCI6MTc0NjM3ODI0Mn0.PA63yX_DjimKUN42evOWyQFkPw-J7NF_3qQZC6WQxoU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/report/kardex-report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"report",
+								"kardex-report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kardex",
+			"item": [
+				{
+					"name": "Ver entradas de productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3N2VlODAxNzkwOTQ5MzBmYjg3N2YiLCJpYXQiOjE3NDYzNzMxMjcsImV4cCI6MTc0NjM3NjcyN30.WqHqz42Hr8HShe_haVnLhcPWgcMy4TD-LunADOFb0F0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/kardex",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"kardex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salida de productos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3N2VlODAxNzkwOTQ5MzBmYjg3N2YiLCJpYXQiOjE3NDYzNzQ2NDIsImV4cCI6MTc0NjM3ODI0Mn0.PA63yX_DjimKUN42evOWyQFkPw-J7NF_3qQZC6WQxoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"681552ecc43527a12f7ecd39\",\r\n  \"quantity\": 1,\r\n  \"reason\": \"Venta al detalle\",\r\n  \"destination\": \"Cliente XYZ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/kardex/salida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"kardex",
+								"salida"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suppliers",
+			"item": [
+				{
+					"name": "Agregar proveedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzg4ODQsImV4cCI6MTc0NjI0MjQ4NH0.RP9y-uXhElKUBPHSp5TCmZc4vut2jVMGYvMQY9Mwl20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Supplier Name\",\r\n  \"contact\": \"Contact Information\",\r\n  \"products_supplied\": [\"68157a4cf559d2e59896266a\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar proveedor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMzg4ODQsImV4cCI6MTc0NjI0MjQ4NH0.RP9y-uXhElKUBPHSp5TCmZc4vut2jVMGYvMQY9Mwl20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Supplier Iphone\",\r\n  \"contact\": \"Contact Information\",\r\n  \"products_supplied\": [\"68157a4cf559d2e59896266a\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/supplier/6815803fd3f7bd8206f55e33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"supplier",
+								"6815803fd3f7bd8206f55e33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar proveedor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODExNGFjZTNlYWIzM2VhMDI1YWUyNDIiLCJpYXQiOjE3NDYyMjc3MzgsImV4cCI6MTc0NjIzMTMzOH0.NuNzQrtcR_ENhKKuflCu4sxcfPr5pgasOygrKUhV-VA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/supplier/68155ddc2f2bd200fdb4b475",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"supplier",
+								"68155ddc2f2bd200fdb4b475"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar proveedores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Listar usuarios",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Mi perfil",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3YjY2MGJhNmNmNzdkYmI0ODBjNjQiLCJpYXQiOjE3NDY0ODgzMzMsImV4cCI6MTc0NjQ5MTkzM30.5GOye_NqSNA1_Uy6lna-NjysnJOmRow6l6lgWu5yhRk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/users/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar perfil",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODE3YjY2MGJhNmNmNzdkYmI0ODBjNjQiLCJpYXQiOjE3NDY0OTExMTIsImV4cCI6MTc0NjQ5NDcxMn0.2rwxVXEDZZHpg1bshNlxrxh-UzAVztXX0BzrPSr213A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Michael\",\r\n    \"surname\": \"De santa\",\r\n    \"username\": \"mDeSanta\",\r\n    \"email\": \"desanta@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/Almacenadora/v1/users/6817ec34da74863578dd6d04",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Almacenadora",
+								"v1",
+								"users",
+								"6817ec34da74863578dd6d04"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

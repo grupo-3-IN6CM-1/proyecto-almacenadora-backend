@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "68196ebd24f436b18cbcb147"
+  },
+  "product": {
+    "$oid": "68196ebd24f436b18cbcb145"
+  },
+  "quantity": 18,
+  "date": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:06:53.886Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:06:53.886Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196f5224f436b18cbcb15b"
+  },
+  "product": {
+    "$oid": "68196f5224f436b18cbcb159"
+  },
+  "quantity": 12,
+  "date": {
+    "$date": "2025-05-08T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:09:22.613Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:09:22.613Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196f7924f436b18cbcb162"
+  },
+  "product": {
+    "$oid": "68196f7924f436b18cbcb160"
+  },
+  "quantity": 16,
+  "date": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:10:01.007Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:10:01.007Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819709624f436b18cbcb198"
+  },
+  "product": {
+    "$oid": "68196ebd24f436b18cbcb145"
+  },
+  "quantity": 5,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas",
+  "destination": "Max",
+  "date": {
+    "$date": "2025-05-06T02:14:46.270Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:14:46.270Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:14:46.270Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819710a24f436b18cbcb1a2"
+  },
+  "product": {
+    "$oid": "68196f5224f436b18cbcb159"
+  },
+  "quantity": 6,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas",
+  "destination": "Max",
+  "date": {
+    "$date": "2025-05-06T02:16:42.628Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:16:42.629Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:16:42.629Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819712524f436b18cbcb1a9"
+  },
+  "product": {
+    "$oid": "68196f7924f436b18cbcb160"
+  },
+  "quantity": 8,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas",
+  "destination": "Max",
+  "date": {
+    "$date": "2025-05-06T02:17:09.437Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T02:17:09.437Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:17:09.437Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681995bd780ec7aaeb8d50c1"
+  },
+  "product": {
+    "$oid": "681995bd780ec7aaeb8d50bf"
+  },
+  "quantity": 30,
+  "date": {
+    "$date": "2025-06-06T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:53:17.807Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:53:17.807Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819965dc0f1ac9a4bea5f4a"
+  },
+  "product": {
+    "$oid": "6819965dc0f1ac9a4bea5f48"
+  },
+  "quantity": 50,
+  "date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:55:57.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:55:57.227Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819968ac0f1ac9a4bea5f51"
+  },
+  "product": {
+    "$oid": "6819968ac0f1ac9a4bea5f4f"
+  },
+  "quantity": 5,
+  "date": {
+    "$date": "2025-05-07T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:56:42.683Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:56:42.683Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681996b4c0f1ac9a4bea5f58"
+  },
+  "product": {
+    "$oid": "681996b4c0f1ac9a4bea5f56"
+  },
+  "quantity": 10,
+  "date": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "action": "entry",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:57:24.629Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:57:24.629Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199748c0f1ac9a4bea5f82"
+  },
+  "product": {
+    "$oid": "6819965dc0f1ac9a4bea5f48"
+  },
+  "quantity": 2,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas",
+  "destination": "Ventas",
+  "date": {
+    "$date": "2025-05-06T04:59:52.618Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:59:52.618Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:59:52.618Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819974ec0f1ac9a4bea5f89"
+  },
+  "product": {
+    "$oid": "681995bd780ec7aaeb8d50bf"
+  },
+  "quantity": 2,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas",
+  "destination": "Ventas",
+  "date": {
+    "$date": "2025-05-06T04:59:58.850Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T04:59:58.850Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:59:58.850Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819977cc0f1ac9a4bea5f97"
+  },
+  "product": {
+    "$oid": "6819968ac0f1ac9a4bea5f4f"
+  },
+  "quantity": 2,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Venta por mayor",
+  "destination": "Venta ",
+  "date": {
+    "$date": "2025-05-06T05:00:44.708Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T05:00:44.708Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T05:00:44.708Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681998e611813d4ddd5e2737"
+  },
+  "product": {
+    "$oid": "6819965dc0f1ac9a4bea5f48"
+  },
+  "quantity": 10,
+  "action": "exit",
+  "employee": {
+    "name": "Elmer",
+    "surname": "Santos"
+  },
+  "reason": "Ventas por mayor",
+  "destination": "Tiendas",
+  "date": {
+    "$date": "2025-05-06T05:06:46.121Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-06T05:06:46.121Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T05:06:46.121Z"
+  }
+}]

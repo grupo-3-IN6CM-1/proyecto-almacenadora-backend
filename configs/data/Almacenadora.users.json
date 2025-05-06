@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "68196e0624f436b18cbcb11a"
+  },
+  "name": "Elmer",
+  "surname": "Santos",
+  "username": "elmersantos",
+  "email": "elmersantos@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$yxtPSYJ1n24insMZsPxeBw$/zGlmn/VrTrAY77VSl2jTREf+wJey9ResdggI5CJxRg",
+  "role": "ADMIN",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:03:50.254Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:03:50.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196e3724f436b18cbcb120"
+  },
+  "name": "Esteban ",
+  "surname": "Cano",
+  "username": "EACG21",
+  "email": "cano@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$8WUGkr73rVd/m4k9KKdy0A$2INtVajnHVKOBUGjUvUbmC1+nLBX87eCzYKFvFqmYK8",
+  "role": "USER",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:04:39.452Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:04:39.452Z"
+  }
+}]

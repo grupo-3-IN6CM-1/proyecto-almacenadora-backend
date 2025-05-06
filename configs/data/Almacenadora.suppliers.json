@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "6819705d24f436b18cbcb17a"
+  },
+  "name": "Samsung v.1",
+  "contact": "s@gxt.com",
+  "products_supplied": [
+    {
+      "$oid": "68196f7924f436b18cbcb160"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:13:49.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:14:06.851Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819750d780ec7aaeb8d509d"
+  },
+  "name": "Apple GT",
+  "contact": "123@gmail.com",
+  "products_supplied": [
+    {
+      "$oid": "68196ebd24f436b18cbcb145"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:33:49.393Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:34:05.759Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199574780ec7aaeb8d50ae"
+  },
+  "name": "Motorola",
+  "contact": "moto@motogt.com",
+  "products_supplied": [
+    {
+      "$oid": "68196f7924f436b18cbcb160"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:52:04.056Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:52:04.056Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681996e4c0f1ac9a4bea5f64"
+  },
+  "name": "Ethnicraft",
+  "contact": "ethnicraft@gt.com",
+  "products_supplied": [
+    {
+      "$oid": "681996b4c0f1ac9a4bea5f56"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:58:12.557Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:58:12.557Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199705c0f1ac9a4bea5f69"
+  },
+  "name": "Kave Home",
+  "contact": "home@group.com",
+  "products_supplied": [
+    {
+      "$oid": "6819968ac0f1ac9a4bea5f4f"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:58:45.093Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:58:45.093Z"
+  }
+}]

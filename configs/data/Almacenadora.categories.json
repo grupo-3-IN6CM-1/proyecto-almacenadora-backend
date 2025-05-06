@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "68196e0624f436b18cbcb11d"
+  },
+  "name": "Default",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:03:50.258Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:03:50.258Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196e6a24f436b18cbcb134"
+  },
+  "name": "Tecnologia v.1",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:05:30.252Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:06:04.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199582780ec7aaeb8d50b3"
+  },
+  "name": "Hogar",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:52:18.438Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:52:18.438Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68199587780ec7aaeb8d50b7"
+  },
+  "name": "Cocina",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:52:23.902Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:52:23.902Z"
+  }
+}]

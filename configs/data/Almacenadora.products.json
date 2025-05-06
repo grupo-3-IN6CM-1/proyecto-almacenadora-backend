@@ -1,0 +1,182 @@
+[{
+  "_id": {
+    "$oid": "68196ebd24f436b18cbcb145"
+  },
+  "name": "Iphone 15 pro max",
+  "description": "Telefono y mas",
+  "price": 5600,
+  "stock": 15,
+  "category": {
+    "$oid": "68196e6a24f436b18cbcb134"
+  },
+  "supplier": "Apple mx",
+  "entry_date": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2026-05-26T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:06:53.884Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:14:46.269Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196f5224f436b18cbcb159"
+  },
+  "name": "Oppo 100 ",
+  "description": "telefonos",
+  "price": 5000,
+  "stock": 6,
+  "category": {
+    "$oid": "68196e6a24f436b18cbcb134"
+  },
+  "supplier": "Oppo",
+  "entry_date": {
+    "$date": "2025-05-08T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-05-29T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:09:22.612Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:16:42.627Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68196f7924f436b18cbcb160"
+  },
+  "name": "Moto G200",
+  "description": "Telefonos",
+  "price": 4800,
+  "stock": 8,
+  "category": {
+    "$oid": "68196e6a24f436b18cbcb134"
+  },
+  "supplier": "Motorola",
+  "entry_date": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T02:10:01.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:17:09.436Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681995bd780ec7aaeb8d50bf"
+  },
+  "name": "Sarten",
+  "description": "Utensilio de cocina ",
+  "price": 50,
+  "stock": 28,
+  "category": {
+    "$oid": "68199587780ec7aaeb8d50b7"
+  },
+  "supplier": "roaster",
+  "entry_date": {
+    "$date": "2025-06-06T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-06-07T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:53:17.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:59:58.849Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819965dc0f1ac9a4bea5f48"
+  },
+  "name": "Cubiertos ",
+  "description": "Utensilios ",
+  "price": 15,
+  "stock": 38,
+  "category": {
+    "$oid": "68199587780ec7aaeb8d50b7"
+  },
+  "supplier": "roaster",
+  "entry_date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-05-23T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:55:57.224Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T05:06:46.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819968ac0f1ac9a4bea5f4f"
+  },
+  "name": "Sillon",
+  "description": "Mueble",
+  "price": 500,
+  "stock": 3,
+  "category": {
+    "$oid": "68199582780ec7aaeb8d50b3"
+  },
+  "supplier": "Kave Home",
+  "entry_date": {
+    "$date": "2025-05-07T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-05-30T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:56:42.682Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T05:00:44.707Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681996b4c0f1ac9a4bea5f56"
+  },
+  "name": "Comedor",
+  "description": "Mueble",
+  "price": 950,
+  "stock": 10,
+  "category": {
+    "$oid": "68199582780ec7aaeb8d50b3"
+  },
+  "supplier": "Ethnicraft",
+  "entry_date": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "expiration_date": {
+    "$date": "2025-05-16T00:00:00.000Z"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:57:24.628Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T04:57:24.628Z"
+  }
+}]
