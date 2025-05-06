@@ -9,7 +9,6 @@ router.get(
   "/products-report",
   [
     validarJWT,
-    tieneRole("ADMIN") 
   ],
   generateAndOpenProductsReport 
 );

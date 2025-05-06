@@ -1,17 +1,64 @@
-// src/reports/report.controller.js
+import { response } from "express";
+import Product from "../product/product.model.js";
 import exceljs from "exceljs";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import open from "open";
-import Product from "../product/product.model.js";
-import Kardex from "../kardex/kardex.model.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
 
 export const generateAndOpenProductsReport = async (req, res = response) => {
+  try {
+    const products = await Product.find().populate("category", "name").lean();
+    if (!products.length) {
+      return res.status(404).json({
+        success: false,
+        message: "No products were found",
+      });
+    }
+
+    const templatePath = path.join(__dirname, "../templates/Report_Products.xlsx");
+    const workbook = new exceljs.Workbook();
+    await workbook.xlsx.readFile(templatePath);
+    const worksheet = workbook.getWorksheet(1);
+
+    let rowIndex = 5;
+    products.forEach(product => {
+      worksheet.getCell(`A${rowIndex}`).value = product._id;
+      worksheet.getCell(`B${rowIndex}`).value = product.name;
+      worksheet.getCell(`C${rowIndex}`).value = product.description;
+      worksheet.getCell(`D${rowIndex}`).value = product.price;
+      worksheet.getCell(`E${rowIndex}`).value = product.stock;
+      worksheet.getCell(`F${rowIndex}`).value = product.category?.name ?? "N/A";
+      worksheet.getCell(`G${rowIndex}`).value = product.supplier;
+      worksheet.getCell(`H${rowIndex}`).value = product.entry_date;
+      worksheet.getCell(`I${rowIndex}`).value = product.expiration_date;
+      rowIndex++;
+    });
+
+    const reportsDir = path.join(__dirname, "../reports");
+    if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
+
+    const filePath = path.join(reportsDir, "Products_Report.xlsx");
+    await workbook.xlsx.writeFile(filePath);
+    await open(filePath);
+
+    res.status(200).json({
+      success: true,
+      message: "Report generated successfully and opened in Excel",
+      filePath
+    });
+  } catch (error) {
+    console.error("Error generating report:", error);
+    res.status(500).json({
+      success: false,
+      message: "Ups, something went wrong trying to generate the report",
+      error: error.message,
+    });
+  }
 };
 
 export const generateKardexReport = async (req, res = response) => {
